@@ -22,7 +22,7 @@ function displayUsers(users) {
     </tr>`;
   });
 
-  document.getElementById("table-regs").innerHTML = tableBody;
+  document.getElementById("table-regs").innerHTML = tableBody; // Displaying the API's data in the table
 }
 
 // SEARCH FUNCTIONALITY
@@ -50,12 +50,3 @@ input.addEventListener("keyup", async (e) => {
 window.addEventListener("load", function () {
   usersList();
 });
-
-// Search
-// document.addEventListener("keyup", (e) => {
-//   input.forEach((dataUser) => {
-//     dataUser.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-//       ? (dataUser.style.display = "block")
-//       : (dataUser.style.display = "none");
-//   });
-// });
