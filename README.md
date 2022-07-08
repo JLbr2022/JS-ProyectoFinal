@@ -5,7 +5,7 @@
 #### Requerimientos:
 
 .- Consumir una API:
-.- Obtener los datos de un usuario
+.- Obtener los datos de un usuario.
 .- Mostrar los datos del usuario manipulando el DOM
 
 #### Contenido del proyecto:
