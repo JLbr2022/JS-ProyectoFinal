@@ -6,7 +6,7 @@ const url = "https://jsonplaceholder.typicode.com/users";
 window.addEventListener("load", function () {
   formSearch.reset();
   document.getElementById("searchInput").focus();
-  document.getElementById("radioByName").checked = true; // Setting the radio button "By Name" as default
+  // document.getElementById("radioByName").checked = true; // Setting the radio button "By Name" as default
   usersList();
 });
 
@@ -42,15 +42,6 @@ input.addEventListener("keyup", async (e) => {
   let tableBody = ``;
 
   users.forEach((dataUser) => {
-    let searchBy = "";
-
-    let btnrName = document.getElementById("radioByEmail").value;
-    if (btnrName === "on") {
-      searchBy = "username";
-    } else {
-      searchBy = "email";
-    }
-
     if (
       // dataUser.searchBy.toLowerCase().includes(e.target.value.toLowerCase())
       dataUser.username.toLowerCase().includes(e.target.value.toLowerCase())
