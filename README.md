@@ -5,15 +5,20 @@
 #### Requerimientos:
 
 .- Consumir una API:
+
 .- Obtener los datos de un usuario.
+
 .- Mostrar los datos del usuario manipulando el DOM
 
 #### Contenido del proyecto:
 
-.- API Consumida: {JSON} Placeholder de uso gratuito
-.- Campo de búsqueda interactiva
-.- Tabla de usuarios general
-.- Tabla de usuarios filtrada por nombre
+-[x] API Consumida: {JSON} Placeholder de uso gratuito
+
+-[x] Campo de búsqueda interactiva
+
+-[x] Tabla de usuarios general
+
+-[x] Tabla de usuarios filtrada por nombre
 
 #### Landing page
 
