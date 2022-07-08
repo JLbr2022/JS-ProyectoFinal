@@ -1,16 +1,17 @@
+// Declaring constants
+
 const input = document.querySelector("#searchInput");
 const formSearch = document.getElementById("formSearch");
-// Declaring var "url" to contain the API's url
 const url = "https://jsonplaceholder.typicode.com/users";
 
+// Loading DOM
 window.addEventListener("load", function () {
   formSearch.reset();
   document.getElementById("searchInput").focus();
-  // document.getElementById("radioByName").checked = true; // Setting the radio button "By Name" as default
   usersList();
 });
 
-// Function to get the users from the API
+// Function to fetch the API's data
 const usersList = async () => {
   // Declaring function "listUsers" to fetch the API's data
   const response = await fetch(url); // Declaring "response" which contains the API's data fetching
@@ -18,7 +19,7 @@ const usersList = async () => {
   displayUsers(users); // Calling the function "displayUsers" to display the API's data
 };
 
-// Function to display the users
+// Function to display the users on a table bootstrap style
 function displayUsers(users) {
   let tableBody = ``;
 
