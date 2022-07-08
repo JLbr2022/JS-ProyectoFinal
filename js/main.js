@@ -1,6 +1,14 @@
 const input = document.querySelector("#searchInput");
+const formSearch = document.getElementById("formSearch");
 // Declaring var "url" to contain the API's url
 const url = "https://jsonplaceholder.typicode.com/users";
+
+window.addEventListener("load", function () {
+  formSearch.reset();
+  document.getElementById("searchInput").focus();
+  document.getElementById("radioByName").checked = true; // Setting the radio button "By Name" as default
+  usersList();
+});
 
 // Function to get the users from the API
 const usersList = async () => {
@@ -10,10 +18,11 @@ const usersList = async () => {
   displayUsers(users); // Calling the function "displayUsers" to display the API's data
 };
 
+// Function to display the users
 function displayUsers(users) {
   let tableBody = ``;
 
-  users.forEach((dataUser, index) => {
+  users.forEach((dataUser) => {
     tableBody += `<tr>
       <td>${dataUser.id}</td>
       <td>${dataUser.username}</td>
@@ -32,8 +41,18 @@ input.addEventListener("keyup", async (e) => {
 
   let tableBody = ``;
 
-  users.forEach((dataUser, index) => {
+  users.forEach((dataUser) => {
+    let searchBy = "";
+
+    let btnrName = document.getElementById("radioByEmail").value;
+    if (btnrName === "on") {
+      searchBy = "username";
+    } else {
+      searchBy = "email";
+    }
+
     if (
+      // dataUser.searchBy.toLowerCase().includes(e.target.value.toLowerCase())
       dataUser.username.toLowerCase().includes(e.target.value.toLowerCase())
     ) {
       tableBody += `<tr>
@@ -45,8 +64,4 @@ input.addEventListener("keyup", async (e) => {
     }
   });
   document.getElementById("table-regs").innerHTML = tableBody;
-});
-
-window.addEventListener("load", function () {
-  usersList();
 });
