@@ -18,7 +18,7 @@
 
 -[x] Tabla de países general
 
--[x] Tabla de países filtrada por nombre
+-[x] Tabla de países filtrada por nombre del país
 
 #### Landing page
 
