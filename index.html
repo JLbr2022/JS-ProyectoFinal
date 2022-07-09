@@ -19,12 +19,25 @@
     <div class="container-fluid">
       <a class="navbar-brand fs-1" href="#">JS Project</a>
 
-      <form id="formSearch" class="formField form-floating d-flex" role="search">
-        <input id="searchInput" class="form-control" type="text" name="searcher" placeholder="type a Country..."
+      <form id="formSearch" class="needs-validation formField form-floating d-flex" role="search" novalidate>
+        <input id="searchInput" class="form-control" type="text" name="searchInput" placeholder="type a Country..."
           aria-label="Search">
-        <label for="floatingName">type a country...</label>
+        <label for="searchInput">type a country...</label>
       </form>
 
+    </div>
+
+    <div class="formRadios form-check">
+      <input class="form-check-input m-2" type="radio" name="btrRadio" value="Country" id="btrCountry" checked>
+      <label class="text-light form-check-label" for="btrCountry">
+        Country
+      </label>
+    </div>
+    <div class="formRadios form-check">
+      <input class="form-check-input m-2" type="radio" name="btrRadio" value="Region" id="btrRegion">
+      <label class="text-light form-check-label" for="btrRegion">
+        Region
+      </label>
     </div>
 
   </nav>

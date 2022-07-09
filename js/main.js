@@ -35,26 +35,50 @@ function displayCountries(countries) {
   document.getElementById("table-regs").innerHTML = tableBody; // Displaying the API's data in the table
 }
 
-// SEARCH FUNCTIONALITY
+// SEARCH FUNCTIONALITY BY COUNTRY or REGION
 input.addEventListener("keyup", async (e) => {
   const response = await fetch(url); // Declaring "response" which contains the API's data fetching
   const countries = await response.json(); // Declaring "countries" to contain the API's data response
 
-  let tableBody = ``;
+  var vbtrCountry = document.querySelector(
+    "input[name=btrRadio]:checked"
+  ).value;
 
-  countries.forEach((dataCountries) => {
-    if (
-      dataCountries.name.official
-        .toLowerCase()
-        .includes(e.target.value.toLowerCase())
-    ) {
-      tableBody += `<tr>
+  if (vbtrCountry === "Country") {
+    let tableBody = ``;
+
+    countries.forEach((dataCountries) => {
+      if (
+        dataCountries.name.official
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase())
+      ) {
+        tableBody += `<tr>
         <td>${dataCountries.flag}</td>
         <td>${dataCountries.name.official}</td>
         <td>${dataCountries.population}</td>
         <td>${dataCountries.region}</td>
       </tr>`;
-    }
-  });
-  document.getElementById("table-regs").innerHTML = tableBody;
+      }
+    });
+    document.getElementById("table-regs").innerHTML = tableBody;
+  } else {
+    let tableBody = ``;
+
+    countries.forEach((dataCountries) => {
+      if (
+        dataCountries.region
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase())
+      ) {
+        tableBody += `<tr>
+        <td>${dataCountries.flag}</td>
+        <td>${dataCountries.name.official}</td>
+        <td>${dataCountries.population}</td>
+        <td>${dataCountries.region}</td>
+      </tr>`;
+      }
+    });
+    document.getElementById("table-regs").innerHTML = tableBody;
+  }
 });
