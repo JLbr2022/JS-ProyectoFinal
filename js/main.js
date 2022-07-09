@@ -1,6 +1,6 @@
 // Declaring constants
 
-const input = document.querySelector("#searchInput");
+const input = document.getElementById("searchInput");
 const formSearch = document.getElementById("formSearch");
 const url = "https://restcountries.com/v3.1/all";
 

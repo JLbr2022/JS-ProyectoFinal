@@ -30,6 +30,6 @@
 
 ![Searching by Country](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalByCountry.jpg?raw=true)
 
-#### Doing a search by Country typing some text on search field
+#### Doing a search by Region typing some text on search field
 
 ![Searching by Region](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalByRegion.jpg?raw=true)
