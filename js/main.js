@@ -2,33 +2,34 @@
 
 const input = document.querySelector("#searchInput");
 const formSearch = document.getElementById("formSearch");
-const url = "https://jsonplaceholder.typicode.com/users";
+// const url = "https://jsonplaceholder.typicode.com/countries";
+const url = "https://restcountries.com/v3.1/all";
 
 // Loading DOM
 window.addEventListener("load", function () {
   formSearch.reset();
   document.getElementById("searchInput").focus();
-  usersList();
+  countriesList();
 });
 
 // Function to fetch the API's data
-const usersList = async () => {
+const countriesList = async () => {
   // Declaring function "listUsers" to fetch the API's data
   const response = await fetch(url); // Declaring "response" which contains the API's data fetching
-  const users = await response.json(); // Declaring "users" to contain the API's data response
-  displayUsers(users); // Calling the function "displayUsers" to display the API's data
+  const countries = await response.json(); // Declaring "countries" to contain the API's data response
+  displayCountries(countries); // Calling the function "displayCountries" to display the API's data
 };
 
-// Function to display the users on a table bootstrap style
-function displayUsers(users) {
+// Function to display the countries on a table bootstrap style
+function displayCountries(countries) {
   let tableBody = ``;
 
-  users.forEach((dataUser) => {
+  countries.forEach((dataCountries) => {
     tableBody += `<tr>
-      <td>${dataUser.id}</td>
-      <td>${dataUser.username}</td>
-      <td>${dataUser.email}</td>
-      <td>${dataUser.phone}</td>
+      <td>${dataCountries.flag}</td>
+      <td>${dataCountries.name.official}</td>
+      <td>${dataCountries.population}</td>
+      <td>${dataCountries.region}</td>
     </tr>`;
   });
 
@@ -38,20 +39,21 @@ function displayUsers(users) {
 // SEARCH FUNCTIONALITY
 input.addEventListener("keyup", async (e) => {
   const response = await fetch(url); // Declaring "response" which contains the API's data fetching
-  const users = await response.json(); // Declaring "users" to contain the API's data response
+  const countries = await response.json(); // Declaring "countries" to contain the API's data response
 
   let tableBody = ``;
 
-  users.forEach((dataUser) => {
+  countries.forEach((dataCountries) => {
     if (
-      // dataUser.searchBy.toLowerCase().includes(e.target.value.toLowerCase())
-      dataUser.username.toLowerCase().includes(e.target.value.toLowerCase())
+      dataCountries.name.official
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase())
     ) {
       tableBody += `<tr>
-        <td>${dataUser.id}</td>
-        <td>${dataUser.username}</td>
-        <td>${dataUser.email}</td>
-        <td>${dataUser.phone}</td>
+        <td>${dataCountries.flag}</td>
+        <td>${dataCountries.name.official}</td>
+        <td>${dataCountries.population}</td>
+        <td>${dataCountries.region}</td>
       </tr>`;
     }
   });
