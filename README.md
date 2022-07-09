@@ -20,10 +20,16 @@
 
 -[x] Tabla de países filtrada por nombre del país
 
+-[x] Tabla de países filtrada por región
+
 #### Landing page
 
 ![Main Screen](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalScreen.jpg?raw=true)
 
-#### Doing a search by typing some text on search field
+#### Doing a search by Country typing some text on search field
 
-![Searching Demostration](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/searchingBy.jpg?raw=true)
+![Searching by Country](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalByCountry.jpg?raw=true)
+
+#### Doing a search by Country typing some text on search field
+
+![Searching by Region](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalByRegion.jpg?raw=true)
