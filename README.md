@@ -6,19 +6,19 @@
 
 .- Consumir una API:
 
-.- Obtener los datos de un usuario.
+.- Obtener los datos de países
 
-.- Mostrar los datos del usuario manipulando el DOM
+.- Mostrar los datos de países manipulando el DOM
 
 #### Contenido del proyecto:
 
--[x] API Consumida: {JSON} Placeholder de uso gratuito
+-[x] API Consumida: [REST Countries API](https://restcountries.com/v3.1/all).
 
 -[x] Campo de búsqueda interactiva
 
--[x] Tabla de usuarios general
+-[x] Tabla de países general
 
--[x] Tabla de usuarios filtrada por nombre
+-[x] Tabla de países filtrada por nombre
 
 #### Landing page
 
