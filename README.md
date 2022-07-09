@@ -12,7 +12,7 @@
 
 #### Contenido del proyecto:
 
--[x] API Consumida: [REST Countries API](https://restcountries.com/v3.1/all).
+-[x] API Consumida: [REST Countries API](https://restcountries.com).
 
 -[x] Campo de búsqueda interactiva
 
@@ -22,8 +22,8 @@
 
 #### Landing page
 
-![enter image description here](https://github.com/JLbr2022/JS-ProyectoFinal/blob/Buscador/img/principalScreen.jpg?raw=true)
+![Main Screen](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/principalScreen.jpg?raw=true)
 
 #### Doing a search by typing some text on search field
 
-![enter image description here](https://raw.githubusercontent.com/JLbr2022/JS-ProyectoFinal/Buscador/img/searchingBy.webp)
+![Searching Demostration](https://github.com/JLbr2022/JS-ProyectoFinal/blob/master/img/searchingBy.jpg?raw=true)
