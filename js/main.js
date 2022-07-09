@@ -2,7 +2,6 @@
 
 const input = document.querySelector("#searchInput");
 const formSearch = document.getElementById("formSearch");
-// const url = "https://jsonplaceholder.typicode.com/countries";
 const url = "https://restcountries.com/v3.1/all";
 
 // Loading DOM
